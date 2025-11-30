@@ -18,6 +18,7 @@ export interface ICase extends Document {
   region?: string;
   jurisdiction?: string;
   assignedTo?: mongoose.Types.ObjectId;
+  client?: mongoose.Types.ObjectId;
   parties?: IParty[];
   slaDeadline?: Date;
   isLegalHold: boolean;
@@ -49,6 +50,7 @@ const CaseSchema = new Schema<ICase>(
     region: String,
     jurisdiction: String,
     assignedTo: { type: Schema.Types.ObjectId, ref: 'User' },
+    client: { type: Schema.Types.ObjectId, ref: 'Client' },
     parties: [PartySchema],
     slaDeadline: Date,
     isLegalHold: { type: Boolean, default: false }

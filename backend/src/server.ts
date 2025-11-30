@@ -5,6 +5,8 @@ import morgan from 'morgan';
 import connectDB from './config/db';
 import authRoutes from './routes/authRoutes';
 import caseRoutes from './routes/caseRoutes';
+import clientRoutes from './routes/clientRoutes';
+import diaryRoutes from './routes/diaryRoutes';
 
 const app = express();
 
@@ -25,6 +27,8 @@ app.get('/api/health', (_req, res) => {
 
 app.use('/api/auth', authRoutes);
 app.use('/api/cases', caseRoutes);
+app.use('/api/clients', clientRoutes);
+app.use('/api/diary', diaryRoutes);
 
 const PORT = process.env.PORT || 4000;
 

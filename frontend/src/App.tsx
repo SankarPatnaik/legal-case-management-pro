@@ -3,6 +3,8 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import DashboardPage from './pages/DashboardPage';
 import CaseDetailPage from './pages/CaseDetailPage';
+import ClientsPage from './pages/ClientsPage';
+import DiaryPage from './pages/DiaryPage';
 import { RequireAuth } from './components/RouteGuards';
 
 const App: React.FC = () => {
@@ -22,6 +24,22 @@ const App: React.FC = () => {
         element={
           <RequireAuth>
             <CaseDetailPage />
+          </RequireAuth>
+        }
+      />
+      <Route
+        path="/clients"
+        element={
+          <RequireAuth>
+            <ClientsPage />
+          </RequireAuth>
+        }
+      />
+      <Route
+        path="/diary"
+        element={
+          <RequireAuth>
+            <DiaryPage />
           </RequireAuth>
         }
       />

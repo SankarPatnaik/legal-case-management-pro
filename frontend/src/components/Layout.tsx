@@ -13,8 +13,17 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   };
 
   const navItems = [
-    { label: 'Dashboard', to: '/', match: '/' }
+    { label: 'Dashboard', to: '/', match: '/' },
+    { label: 'Clients', to: '/clients', match: '/clients' },
+    { label: 'Diary', to: '/diary', match: '/diary' }
   ];
+
+  const resolvedTitle =
+    location.pathname === '/'
+      ? 'Dashboard'
+      : location.pathname.startsWith('/cases/')
+      ? 'Case Details'
+      : navItems.find((item) => location.pathname.startsWith(item.match))?.label || 'Workspace';
 
   return (
     <div className="min-h-screen flex bg-slate-50">
@@ -53,9 +62,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       </aside>
       <main className="flex-1">
         <header className="h-14 bg-white border-b border-slate-200 flex items-center px-6">
-          <h2 className="text-base font-semibold text-slate-800">
-            {location.pathname === '/' ? 'Dashboard' : 'Case Details'}
-          </h2>
+          <h2 className="text-base font-semibold text-slate-800">{resolvedTitle}</h2>
         </header>
         <section className="p-6">{children}</section>
       </main>
