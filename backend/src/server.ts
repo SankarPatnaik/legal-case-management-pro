@@ -7,6 +7,9 @@ import authRoutes from './routes/authRoutes';
 import caseRoutes from './routes/caseRoutes';
 import clientRoutes from './routes/clientRoutes';
 import diaryRoutes from './routes/diaryRoutes';
+import lawyerRoutes from './routes/lawyerRoutes';
+import bookingRoutes from './routes/bookingRoutes';
+import intakeRoutes from './routes/intakeRoutes';
 
 const app = express();
 
@@ -29,6 +32,9 @@ app.use('/api/auth', authRoutes);
 app.use('/api/cases', caseRoutes);
 app.use('/api/clients', clientRoutes);
 app.use('/api/diary', diaryRoutes);
+app.use('/api/lawyers', lawyerRoutes);
+app.use('/api/bookings', bookingRoutes);
+app.use('/api/intake', intakeRoutes);
 
 const PORT = process.env.PORT || 4000;
 

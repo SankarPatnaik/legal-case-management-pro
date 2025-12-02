@@ -15,7 +15,8 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const navItems = [
     { label: 'Dashboard', to: '/', match: '/' },
     { label: 'Clients', to: '/clients', match: '/clients' },
-    { label: 'Diary', to: '/diary', match: '/diary' }
+    { label: 'Diary', to: '/diary', match: '/diary' },
+    { label: 'Marketplace', to: '/marketplace', match: '/marketplace' }
   ];
 
   const resolvedTitle =
