@@ -5,6 +5,7 @@ import DashboardPage from './pages/DashboardPage';
 import CaseDetailPage from './pages/CaseDetailPage';
 import ClientsPage from './pages/ClientsPage';
 import DiaryPage from './pages/DiaryPage';
+import MarketplacePage from './pages/MarketplacePage';
 import { RequireAuth } from './components/RouteGuards';
 
 const App: React.FC = () => {
@@ -40,6 +41,14 @@ const App: React.FC = () => {
         element={
           <RequireAuth>
             <DiaryPage />
+          </RequireAuth>
+        }
+      />
+      <Route
+        path="/marketplace"
+        element={
+          <RequireAuth>
+            <MarketplacePage />
           </RequireAuth>
         }
       />
