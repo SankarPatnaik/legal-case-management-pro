@@ -10,6 +10,7 @@ import diaryRoutes from './routes/diaryRoutes';
 import lawyerRoutes from './routes/lawyerRoutes';
 import bookingRoutes from './routes/bookingRoutes';
 import intakeRoutes from './routes/intakeRoutes';
+import billingRoutes from './routes/billingRoutes';
 
 const app = express();
 
@@ -35,6 +36,7 @@ app.use('/api/diary', diaryRoutes);
 app.use('/api/lawyers', lawyerRoutes);
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/intake', intakeRoutes);
+app.use('/api/billing', billingRoutes);
 
 const PORT = process.env.PORT || 4000;
 
