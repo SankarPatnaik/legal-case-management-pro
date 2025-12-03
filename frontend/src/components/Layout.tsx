@@ -16,6 +16,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     { label: 'Dashboard', to: '/', match: '/' },
     { label: 'Clients', to: '/clients', match: '/clients' },
     { label: 'Diary', to: '/diary', match: '/diary' },
+    { label: 'Billing', to: '/billing', match: '/billing' },
     { label: 'Marketplace', to: '/marketplace', match: '/marketplace' }
   ];
 

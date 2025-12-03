@@ -6,6 +6,7 @@ A production-ready starter for a **Legal Case Management** system built with:
 - **Backend:** Node.js + Express + TypeScript + MongoDB (Mongoose)
 - **Auth:** JWT-based authentication with role-based access control (RBAC)
 - **UI:** Tailwind UI-style components and responsive layout
+- **Billing:** Time tracking, invoicing, and expense capture with GST/tax support
 - **Infra Ready:** Dockerized frontend & backend
 - **CI/CD:** GitHub Actions workflow skeleton for AWS + ECR deployment
 
@@ -37,6 +38,11 @@ npm start              # run compiled JS
 - `npm run dev` – Start dev server with auto-reload
 - `npm run build` – TypeScript compile to `dist`
 - `npm start` – Run production build
+
+### Feature Highlights
+
+- **Billing & Timekeeping:** `/api/billing` exposes time-entry capture, GST-ready invoice generation, expense tracking, and admin-only audit trails.
+- **Auditability:** Immutable audit log for billing actions to help with compliance checks.
 
 ### Environment Variables (`backend/.env.example`)
 

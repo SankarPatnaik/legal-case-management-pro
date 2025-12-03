@@ -6,6 +6,7 @@ import CaseDetailPage from './pages/CaseDetailPage';
 import ClientsPage from './pages/ClientsPage';
 import DiaryPage from './pages/DiaryPage';
 import MarketplacePage from './pages/MarketplacePage';
+import BillingPage from './pages/BillingPage';
 import { RequireAuth } from './components/RouteGuards';
 
 const App: React.FC = () => {
@@ -49,6 +50,14 @@ const App: React.FC = () => {
         element={
           <RequireAuth>
             <MarketplacePage />
+          </RequireAuth>
+        }
+      />
+      <Route
+        path="/billing"
+        element={
+          <RequireAuth>
+            <BillingPage />
           </RequireAuth>
         }
       />
